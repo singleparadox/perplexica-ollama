@@ -17,7 +17,7 @@ services:
     environment:
       - SEARXNG_API_URL=http://searxng:8080
     ports:
-      - 3000:3000
+      - 3045:3000
     networks:
       - perplexica-network
     volumes:
@@ -26,9 +26,25 @@ services:
       - ./config.toml:/home/perplexica/config.toml
     restart: unless-stopped
 
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - perplexica-network
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+
 networks:
   perplexica-network:
 
 volumes:
   backend-dbstore:
   uploads:
+  ollama:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./ollama
+      o: bind

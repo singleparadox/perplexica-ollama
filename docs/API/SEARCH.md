@@ -6,9 +6,9 @@ Perplexica’s Search API makes it easy to use our AI-powered search engine. You
 
 ## Endpoint
 
-### **POST** `http://localhost:3000/api/search`
+### **POST** `http://localhost:3045/api/search`
 
-**Note**: Replace `3000` with any other port if you've changed the default PORT
+**Note**: Replace `3045` with any other port if you've changed the default PORT
 
 ### Request
 
@@ -38,7 +38,7 @@ The API accepts a JSON object in the request body, where you define the focus mo
 
 ### Request Parameters
 
-- **`chatModel`** (object, optional): Defines the chat model to be used for the query. For model details you can send a GET request at `http://localhost:3000/api/models`. Make sure to use the key value (For example "gpt-4o-mini" instead of the display name "GPT 4 omni mini").
+- **`chatModel`** (object, optional): Defines the chat model to be used for the query. For model details you can send a GET request at `http://localhost:3045/api/models`. Make sure to use the key value (For example "gpt-4o-mini" instead of the display name "GPT 4 omni mini").
 
   - `provider`: Specifies the provider for the chat model (e.g., `openai`, `ollama`).
   - `name`: The specific model from the chosen provider (e.g., `gpt-4o-mini`).
@@ -46,7 +46,7 @@ The API accepts a JSON object in the request body, where you define the focus mo
     - `customOpenAIBaseURL`: If you’re using a custom OpenAI instance, provide the base URL.
     - `customOpenAIKey`: The API key for a custom OpenAI instance.
 
-- **`embeddingModel`** (object, optional): Defines the embedding model for similarity-based searching. For model details you can send a GET request at `http://localhost:3000/api/models`. Make sure to use the key value (For example "text-embedding-3-large" instead of the display name "Text Embedding 3 Large").
+- **`embeddingModel`** (object, optional): Defines the embedding model for similarity-based searching. For model details you can send a GET request at `http://localhost:3045/api/models`. Make sure to use the key value (For example "text-embedding-3-large" instead of the display name "Text Embedding 3 Large").
 
   - `provider`: The provider for the embedding model (e.g., `openai`).
   - `name`: The specific embedding model (e.g., `text-embedding-3-large`).

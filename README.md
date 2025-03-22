@@ -107,6 +107,21 @@ There are mainly 2 ways of installing Perplexica - With Docker, Without Docker. 
 
 **Note**: After the containers are built, you can start Perplexica directly from Docker without having to open a terminal.
 
+### Downloading Ollama Models
+
+1. Enter Ollama console:
+```bash
+docker exec -it perplexica-ollama-ollama-1 /bin/sh
+```
+2. Go to https://ollama.com/library/ and find a model you want.
+3. Pull the model you want:
+```
+Syntax: ollama pull [model name]
+
+Example: ollama pull nomic-embed-text
+```
+4. The model should now be available on the Perplexica settings page.
+
 ### Non-Docker Installation
 
 1. Install SearXNG and allow `JSON` format in the SearXNG settings.

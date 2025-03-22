@@ -12,6 +12,8 @@
 
 [Available for MacOS, Linux, & Windows](https://www.warp.dev/perplexica)
 
+This is a fork that has integrated Ollama in the docker compose file. 
+
 </div>
 
 <hr/>
